@@ -1,7 +1,5 @@
 var fs = require('fs');
 
-
-
 function readFile (){
 
     fs.readFile('./test.jpg', function read(err, data) {
@@ -19,4 +17,4 @@ function readFile (){
     
 }
 
-readFile();
+//readFile();
