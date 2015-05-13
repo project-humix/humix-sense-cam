@@ -19,13 +19,13 @@ nats.subscribe('humix.sense.cam.command', function(msg){
 
         // taking a picture..
 
-        proc = child.exec("raspistill -w 640 -h 480 -o ./pics/image.jpg ",function(err,data){
+        proc = child.exec("raspistill -w 640 -h 480 -o ./controls/humix-sense-cam/pics/image.jpg ",function(err,data){
             
 	        if(!err){
                 log.info('done taking picture');
 
 
-                fs.readFile('./pics/image.jpg', function read(err, data) {
+                fs.readFile('./controls/humix-sense-cam/pics/image.jpg', function read(err, data) {
 
                     if (err) {
                         log.error("error reading cam image. abort.")
