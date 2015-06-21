@@ -19,6 +19,7 @@ nats.subscribe('humix.sense.cam.command', function(msg){
     if(command && command.action === 'takePic'){
 
         // taking a picture..
+
         uid++;
         var path = "./controls/humix-sense-cam/pics/"+uid+".jpg";
         log.info('file path:'+path);
@@ -27,6 +28,7 @@ nats.subscribe('humix.sense.cam.command', function(msg){
             
 	        if(!err){
                 log.info('done taking picture');
+
 
 
                 fs.readFile(path, function read(err, data) {
